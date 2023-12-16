@@ -1,0 +1,77 @@
+{% extends 'student/base.html ' %}
+
+{% block home %}
+
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ student_search_form.non_field_errors }}
+
+        <label for="{{ student_search_form.student_id.id_for_label }}">Student ID:</label>
+        {{ student_search_form.student_id }}
+        {{ student_search_form.student_id.errors }}
+
+        <input type="submit" value="Search">
+    </form>
+
+    <!-- If successfully logged in -->
+    {% if user.is_authenticated %}
+
+
+        <!-- Show ALL STUDENTS -->
+        {% if students %}
+            {% for student in students %}
+                <div class="student-card">
+                    <p>{{student.id}} - {{student.last_name}}, {{student.first_name}}</p>
+                    <p>Email: {{student.email}}</p>
+                    <p>Birth Date: {{student.birth_date}}</p>
+                    <div class="buttons">
+
+
+                        <!-- SINGLE STUDENT DETAIL VIEW -->
+                        <button class="button"><a href="{% url 'student_detail' student.id %}">View</a></button>
+
+
+
+
+                        <button class="button"><a href="{% url 'student_update' student.id%}">Update</a></button>
+
+
+                        <!-- STUDENT DELETION  -->
+                        <button class="button"><a href="{% url 'student_delete' student.id %}">Delete</a></button>
+                    </div>
+                </div>
+            {% endfor %}
+
+        <!-- Display ERROR message if request for GETTING ALL students failed-->
+
+
+        {% elif student_search %}
+            <div class="student-card">
+                <p>{{student_search.id}} - {{student_search.last_name}}, {{student_search.first_name}}</p>
+                <p>Email: {{student_search.email}}</p>
+                <p>Birth Date: {{student_search.birth_date}}</p>
+                <div class="buttons">
+
+
+                    <!-- SINGLE STUDENT DETAIL VIEW -->
+                    <button class="button"><a href="{% url 'student_detail' student_search.id %}">View</a></button>
+
+
+
+
+                    <button class="button"><a href="{% url 'student_update' student_search.id%}">Update</a></button>
+
+                    <!-- STUDENT DELETION  -->
+                    <button class="button"><a href="{% url 'student_delete' student_search.id %}">Delete</a></button>
+                </div>
+            </div>
+                
+
+        {% elif error %}
+            <p>{{error}}</p>
+        {% endif %}
+
+    {% endif %}
+    {% endblock%}

@@ -1,0 +1,168 @@
+/* Reset style */
+
+a {
+    color: #333 ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fde9e9; /* Pale Pink */
+    font-family: Arial, sans-serif;
+    color: #333;
+    /* Dark Text Color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    background-color: #fff; /* White */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555; /* Medium Gray */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd; /* Light Gray */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #ff9aa2; /* Light Coral */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.welcome {
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Student cards styling */
+.student-card {
+    width: 50%;
+    background-color: #fff; /* White */
+    border: 1px solid #ddd; /* Light Gray */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-card p {
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button {
+    background-color: #fde9e9;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+.student-details {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White */
+    border: 1px solid #ddd; /* Light Gray */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333; /* Dark Text Color */
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+dt, dd {
+    flex: 0 0 48%; /* Adjust the width as needed */
+    margin-bottom: 10px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-button {
+    background-color: #ff9aa2; /* Light Coral */
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Add margin between buttons */
+
+}
+
+.detail-button:hover {
+    background-color: #c9bfbf; /* Darker Red for hover effect */
+}
+
+
+header {
+    background-color: #eeecec; 
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark Text Color */
+    margin-right: auto;
+}

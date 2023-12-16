@@ -1,0 +1,40 @@
+{% extends 'student/base.html' %}
+
+{% block content %}
+    <div class="student-details">
+        <h2>Student Details</h2>
+        <dl>
+            <dt>Student ID:</dt>
+            <dd>{{ student.id }}</dd>
+
+            <dt>Creator:</dt>
+            <dd>{{ student.creator }}</dd>
+
+    
+   
+
+            <dt>First Name:</dt>
+            <dd>{{ student.first_name }}</dd>
+
+            <dt>Last Name:</dt>
+            <dd>{{ student.last_name }}</dd>
+
+            <dt>Course:</dt>
+            <dd>{{ student.course }}</dd>
+
+
+            <dt>Birth Date:</dt>
+            <dd>{{ student.birth_date }}</dd>
+
+            <div class="action-buttons">
+                <button class="detail-button"><a href="">Update</a></button>
+                <button class="detail-button"><a href="{% url 'student_delete' student.id %}">Delete</a></button>
+            </div>
+
+
+
+        </dl>
+    </div>
+
+
+{% endblock %}
