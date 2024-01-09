@@ -88,7 +88,7 @@ ________________________________________________________________________________
 
 ### Application Routes
 
-1 Function based views API Routes
+<h3>Function based views</h3>
 Refer here for all the list of available routes in the API. You may use Postman in testing the endpoints or the built-in browseable API.
 Keep in mind, this is for all the function based view endpoints.
 
@@ -100,7 +100,7 @@ Keep in mind, this is for all the function based view endpoints.
 * [Delete Student](http://localhost:8000/api/delete<id>)  _Delete an existing student. Provide a student id at the end of this url._
 
 
-2 Class based views API Routes
+<h3>Class based views</h3>
  You may use Postman in testing the endpoints or the built-in browseable API. Do not forget to change the HTTP method to your desire outcome.
 
 * [All Students or Create a Student](http://localhost:8000/api/cbv/students) _For returning all students, and adding a student. Only signed users can add a student with this route._
@@ -108,18 +108,19 @@ Keep in mind, this is for all the function based view endpoints.
 
 
 
-3 Front-end Routes
+<h3>Front-end Routes</h3>
 Refer here for all the list of available routes in the application
-* [Home](http://localhost:8000/home) _You will abe asked to login first before you can access the home page. Make you sure already created a super user account_
+* [Home](http://localhost:8000/home) 
 * [Login](http://localhost:8000/login)
 * [Logout](http://localhost:8000/logout)
 
 
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+___________________________________________________________________________________________________
 
 
 
