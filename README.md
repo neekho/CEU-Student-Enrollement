@@ -18,8 +18,13 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#api-routes">API Routes</a></li>
-    <li><a href="#front-end-routes">Front-end Routes</a></li>
+       <li>
+      <a href="#api-routes">Routes</a>
+      <ul>
+           <li><a href="#api-routes">API Routes</a></li>
+           <li><a href="#front-end-routes">Front-end Routes</a></li>
+      </ul>
+    </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
 
