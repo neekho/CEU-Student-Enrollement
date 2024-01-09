@@ -14,7 +14,7 @@ ________________________________________________________________________________
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
-This is for performing CRUD operations in relation to managing students in a given organization. Currently the main focus of the project is to build a RESTful API with JWT. Improvement of the front-end will began soon.
+This is for performing CRUD operations in relation to managing students in a given organization. Currently the main focus of the project is to build a RESTful API with JWT. Addition of front-end will began soon, along with the integration of all API functions.
 
 Features:
 * Helpful error messages when a bad request happens.
@@ -35,8 +35,8 @@ Features:
 * [![Python][Python.org]][Python-url]
 * [![Django Restframework][Django-rest-framework.org]][Drf-url]
 * [![SQLite][Sqlite.org]][Sqlite-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+<!--* [![Bootstrap][Bootstrap.com]][Bootstrap-url] -->
+<!--* [![JQuery][JQuery.com]][JQuery-url] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,7 +69,7 @@ _Once installed, open a command prompt, choose your directory wherein you want t
    ```sh
    C:\Users\PC> cd ceu
    ```
-3. Create a superuser
+3. Create a superuser _Provide the neccessary information when prompt._
    ```sh
    C:\Users\PC\ceu> python manage.py createsuperuser
    ```
@@ -79,25 +79,36 @@ _Once installed, open a command prompt, choose your directory wherein you want t
     C:\Users\PC\ceu> python manage.py runserver <OPTIONAL: PORTNUMBER>
    ```
 
-_Once the local surver is running, open up a browser and go to http://localhost:8000/home._
+_Once the local surver is running, open up a browser and go to http://localhost:8000/overview._
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+___________________________________________________________________________________________________
 
+### Application Routes
 
-### Function based views API Routes
-Refer here for all the list of available routes in the API. You may use Postman in testing the endpoints.
+1 Function based views API Routes
+Refer here for all the list of available routes in the API. You may use Postman in testing the endpoints or the built-in browseable API.
 Keep in mind, this is for all the function based view endpoints.
 
-* [All Routes](http://localhost:8000/api/overview) _You will abe asked to login first before you can access the home page. Make you sure already created a super user account_
+* [All Routes](http://localhost:8000/api/overview) _Returns all possible routess in JSON format_
 * [Student List](http://localhost:8000/api/students)  _See all existing students in the database._
 * [Single Object Student](http://localhost:8000/api/<id>) _Provide a student id at the end of this url or else this will result in a 404._
 * [Create Student](http://localhost:8000/api/add)  _Create a student that will be save in the SQLite database._
 * [Update Student](http://localhost:8000/api/update<id>)  _Update existing student data. Provide a student id at the end of this url._
 * [Delete Student](http://localhost:8000/api/delete<id>)  _Delete an existing student. Provide a student id at the end of this url._
 
-### Front-end Routes
+
+2 Class based views API Routes
+ You may use Postman in testing the endpoints or the built-in browseable API. Do not forget to change the HTTP method to your desire outcome.
+
+* [All Students or Create a Student](http://localhost:8000/api/cbv/students) _For returning all students, and adding a student. Only signed users can add a student with this route._
+* [Single Object Student Update, and Delete](http://localhost:8000/api/cbv<id>) _For returning the matching student with the provided id num, updating it, or deleting that student. Provide a student id at the end of this url or else this will result in a 404._
+
+
+
+3 Front-end Routes
 Refer here for all the list of available routes in the application
 * [Home](http://localhost:8000/home) _You will abe asked to login first before you can access the home page. Make you sure already created a super user account_
 * [Login](http://localhost:8000/login)
